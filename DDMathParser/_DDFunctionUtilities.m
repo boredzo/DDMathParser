@@ -334,11 +334,11 @@ if (error != nil) { \
 		
 		NSNumber * median = nil;
 		if (([evaluatedNumbers count] % 2) == 1) {
-			NSUInteger index = floor([evaluatedNumbers count] / 2);
+			NSUInteger index = (NSUInteger)floor([evaluatedNumbers count] / 2);
 			median = [evaluatedNumbers objectAtIndex:index];
 		} else {
-			NSUInteger lowIndex = floor([evaluatedNumbers count] / 2);
-			NSUInteger highIndex = ceil([evaluatedNumbers count] / 2);
+			NSUInteger lowIndex = (NSUInteger)floor([evaluatedNumbers count] / 2);
+			NSUInteger highIndex = (NSUInteger)ceil([evaluatedNumbers count] / 2);
             NSNumber *low = [evaluatedNumbers objectAtIndex:lowIndex];
             NSNumber *high = [evaluatedNumbers objectAtIndex:highIndex];
             median = [NSNumber numberWithDouble:([low doubleValue] + [high doubleValue])/2];
